@@ -14,6 +14,7 @@ import { CitasComponent } from './citas/citas.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { RecoComponent } from './reco/reco.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DatePipe } from '@angular/common';
     RevisarComponent,
     CitasComponent,
     FooterComponent,
+    RecoComponent,
   ],
   imports: [
     BrowserModule,
