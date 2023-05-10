@@ -1,6 +1,7 @@
 import { DatePipe, Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { LocalCitasService } from '../local-citas.service';
 
 @Component({
   selector: 'app-agendar',
@@ -16,12 +17,6 @@ export class AgendarComponent implements OnInit {
   public fechaStrMinima!: string | null;
   public horaStrMinima!: string | null;
 
-  ngOnInit() {
-    this.fechaMinima = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-    this.fechaStrMinima = this.pd.transform(this.fechaMinima, "YYYY-MM-dd");
-    console.log(this.fechaStrMinima);
-  }
-
   usuario: any = {
     nombre: "Juan",
     apellidos: "Perez",
@@ -33,7 +28,7 @@ export class AgendarComponent implements OnInit {
   }
 
 
-  constructor(private pd: DatePipe) {
+  constructor(private pd: DatePipe, private citasService: LocalCitasService) {
     this.forma = new FormGroup({
       'nombre': new FormControl('', [Validators.required, Validators.minLength(3)]),
       'apellidos': new FormControl('', [Validators.required]),
@@ -46,9 +41,16 @@ export class AgendarComponent implements OnInit {
     this.forma.setValue(this.usuario);
   }
 
+  ngOnInit() {
+    this.fechaMinima = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+    this.fechaStrMinima = this.pd.transform(this.fechaMinima, "YYYY-MM-dd");
+    console.log(this.fechaStrMinima);
+    //this.usuario = this.citasService.nuevaCita();
+  }
+
   guardarCambios(): void {
-    console.log("metodo guardarCambios");
-    console.log(this.forma);
+    this.citasService.agregarCita(this.forma.value);
+    this.usuario = this.citasService.nuevaCita();
     console.log(this.forma.value);
     this.forma.reset(this.usuario);
   }
