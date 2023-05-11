@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { RecoComponent } from './reco/reco.component';
+import { AlertifyService } from './alertify.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { RecoComponent } from './reco/reco.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [DatePipe],
+  providers: [DatePipe,AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,6 +9,7 @@ export class LocalCitasService {
 
   constructor() {
     this.arrayCitas = JSON.parse(localStorage.getItem('data') || '[]');
+    
   }
 
   getArrayCitas() {
