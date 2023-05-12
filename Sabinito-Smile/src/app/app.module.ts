@@ -13,10 +13,12 @@ import { AgendarComponent } from './citas/agendar/agendar.component';
 import { RevisarComponent } from './citas/revisar/revisar.component';
 import { CitasComponent } from './citas/citas.component';
 import { FooterComponent } from './footer/footer.component';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { RecoComponent } from './reco/reco.component';
 import { AlertifyService } from './alertify.service';
+import { VideoSeguroPipe } from './inicio/video-seguro.pipe';
+
 
 @NgModule({
   declarations: [
@@ -31,13 +33,14 @@ import { AlertifyService } from './alertify.service';
     CitasComponent,
     FooterComponent,
     RecoComponent,
+    VideoSeguroPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [DatePipe,AlertifyService],
+  providers: [DatePipe, AlertifyService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

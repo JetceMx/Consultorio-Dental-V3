@@ -28,7 +28,8 @@
 .contenedor-servicios,
 .contenedor-ayuda,
 .contenedor-ofertas,
-.contenedor-empresa {
+.contenedor-empresa,
+.contenedor-video {
     padding: 10px;
 }
 
@@ -53,9 +54,11 @@
     width: 35%;
 }
 
+
 .informacion>h2,
 .contenedor-servicios>h2,
-.contenedor-ofertas>h2 {
+.contenedor-ofertas>h2,
+.contenedor-video {
     color: #0D6EFD;
 }
 
@@ -72,4 +75,24 @@
     background-repeat: no-repeat, repeat;
     background-size: cover;
     color: white;
+}
+
+.contenedor-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+hr {
+    width: 100%;
+    border-top: 5px solid #2c7df7c2;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }

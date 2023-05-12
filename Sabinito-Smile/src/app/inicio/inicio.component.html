@@ -39,7 +39,7 @@
         <img src="../../assets/images/Consultorio-fuera.jpg" alt="">
         <div class="informacion">
             <h2>Bienvenidos a Sabinito Smile</h2>
-            <h3>Tu sonrisa en nuestras manos</h3>
+            <h3 style="color:#E83F6C;">Tu sonrisa en nuestras manos</h3>
             <br>
             <p>Somos un consultorio de odontología Integral.</p>
             <p>Que tenemos la finalidad de ofrecer tratamientos funcionales, cuidando en todo momento la calidad,
@@ -55,7 +55,7 @@
     <!-- servicios -->
     <div class="contenedor-servicios">
         <h2 class="text-center">Nuestros servicios</h2>
-        <h6 class="text-center">
+        <h6 class="text-center" style="color:#E83F6C;">
             Atendemos pacientes de seguros como: Cimaco, Liverpool, AXA, Inbursa, HSBC, GNP, etc.
         </h6>
         <br>
@@ -105,11 +105,19 @@
         <h2 class="text-center">Promociones</h2>
         <br>
         <div class="contenedor" style="justify-content: space-between; width: 60%;">
+            <div class="iconos">
+                <img class="iconos" src="../../assets/icons/Descuento.png" style="width: 100px; height: 80px;" alt="">
+                <img class="iconos" src="../../assets/icons/Estudiante.png" style="width: 100px; height: 80px;" alt="">
+            </div>
             <div class="promocion">
                 <p class="titulo-oferta">40% de descuento</p>
                 <p>En tu primer cita te aplicamos un 40% de descuento.</p>
                 <p class="titulo-oferta">Descuento especial para estudiantes</p>
                 <p>Apoyando a los jovenes estudiantes para que conserven siempre una hermosa sonrisa.</p>
+            </div>
+            <div class="iconos">
+                <img class="iconos" src="../../assets/icons/Niños.png" style="width: 100px; height: 80px;" alt="">
+                <img class="iconos" src="../../assets/icons/DosporUno.webp" style="width: 100px; height: 80px;" alt="">
             </div>
             <div class="promocion">
                 <p class="titulo-oferta">Limpieza gratis para niños</p>
@@ -121,6 +129,15 @@
     </div>
     <!-- ofertas del mes -->
 
-    <br>
+    <!-- video seguro -->
+    <div class="contenedor-video">
+        <hr class="separator separator--line">
+        <h2 class="text-center">Con nuestro socio de confianza</h2>
+        <br>
+        <iframe width="560" height="315" [src]="video | videoSeguro:'https://www.youtube.com/embed/' " frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+    </div>
+    <!-- video seguro -->
 
 </body>
