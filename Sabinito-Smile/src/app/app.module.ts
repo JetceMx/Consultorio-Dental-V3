@@ -27,6 +27,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
+import { FiltroPipe } from './filtro.pipe';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import {MatMenuModule} from '@angular/material/menu';
     FooterComponent,
     RecoComponent,
     VideoSeguroPipe,
+    FiltroPipe,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatProgressBarModule,
     MatButtonModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule
   ],
   providers: [DatePipe, AlertifyService,],
   bootstrap: [AppComponent]

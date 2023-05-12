@@ -9,6 +9,7 @@ import { LocalCitasService } from '../local-citas.service';
 })
 export class RevisarComponent implements OnInit{
   arrayCitas:citasInterface[] | any;
+  filterPost = '';
 
   constructor(private citasService: LocalCitasService){
 
