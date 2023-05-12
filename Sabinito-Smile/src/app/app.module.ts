@@ -22,6 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -47,6 +52,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatChipsModule,
     MatCardModule,
     MatDialogModule,
+    MatIconModule,
+    MatProgressBarModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatMenuModule
   ],
   providers: [DatePipe, AlertifyService,],
   bootstrap: [AppComponent]

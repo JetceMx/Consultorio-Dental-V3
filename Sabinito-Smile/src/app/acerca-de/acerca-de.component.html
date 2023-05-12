@@ -7,10 +7,14 @@
     <title>Acerca de</title>
 </head>
 <body>
-
-    <h2 class="animate__animated animate__lightSpeedInLeft">!!! Conoce a las personas que se encargan de darle ese brillo a tu sonrisa !!!</h2>
+  
+  <h2 class="animate__animated animate__lightSpeedInLeft">!!! Conoce a las personas que se encargan de darle ese brillo a tu sonrisa !!!</h2>
 
     <nav class="animate__animated animate__lightSpeedInRight" >
+
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      
 
         <mat-card class="example-card">
             <mat-card-header>
@@ -74,13 +78,80 @@
             </mat-card-content>
           </mat-card>
 
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+
     </nav>
 
+    <br><br>
+
+    <h3> !Principales Objetivos de nuestro consultorio! </h3>
+
+    <br><br>
+
+    <mat-grid-list cols="4" rowHeight="100px">
+      <mat-grid-tile
+          *ngFor="let tile of tiles"
+          [colspan]="tile.cols"
+          [rowspan]="tile.rows"
+          [style.background]="tile.color">
+        {{tile.text}}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <br><br>
+
+    <button mat-button [matMenuTriggerFor]="animals">!!!Informacion!!!</button>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Nosotros">Sobre-Nosotros</button>
+  <button mat-menu-item [matMenuTriggerFor]="Uni">Universidad</button>
+</mat-menu>
+
+<mat-menu #Nosotros="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Chilango">Oswaldo</button>
+  <button mat-menu-item [matMenuTriggerFor]="Exuberante">Sebastian</button>
+  <button mat-menu-item [matMenuTriggerFor]="Judio">Manuel</button>
+  <button mat-menu-item [matMenuTriggerFor]="Zeldero">Esau</button>
+</mat-menu>
+
+<mat-menu #Uni="matMenu">
+  <button mat-menu-item>UAA</button>
+  <button mat-menu-item>ISC</button>
+  <button mat-menu-item>6°C</button>
+  <button mat-menu-item>Proyecto Realizado con Fines Academicos</button>
+</mat-menu>
+
+<mat-menu #Chilango="matMenu">
+  <button mat-menu-item>Apasionado</button>
+  <button mat-menu-item>Divertido</button>
+  <button mat-menu-item>Constante</button>
+  <button mat-menu-item disabled>!!CHILANGO!!</button>
+</mat-menu>
+
+<mat-menu #Exuberante="matMenu">
+  <button mat-menu-item>Calmado</button>
+  <button mat-menu-item>Gracioso</button>
+  <button mat-menu-item>Analista</button>
+  <button mat-menu-item disabled>!!EXUBERANTE!!</button>
+</mat-menu>
+
+<mat-menu #Judio="matMenu">
+  <button mat-menu-item>Idealista</button>
+  <button mat-menu-item>Agradable</button>
+  <button mat-menu-item>Apasionado</button>
+  <button mat-menu-item disabled>!!JUDIO!!</button>
+</mat-menu>
+
+<mat-menu #Zeldero="matMenu">
+  <button mat-menu-item>Ocurrente</button>
+  <button mat-menu-item>Elocuente</button>
+  <button mat-menu-item>Divertido</button>
+  <button mat-menu-item disabled>!!ZELDERO!!</button>
+</mat-menu>
 
 
+    <br><br>
     
-      
-
     
 </body>
 </html>
