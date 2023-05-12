@@ -18,6 +18,10 @@ import { DatePipe } from '@angular/common';
 import { RecoComponent } from './reco/reco.component';
 import { AlertifyService } from './alertify.service';
 import { VideoSeguroPipe } from './inicio/video-seguro.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -38,7 +42,11 @@ import { VideoSeguroPipe } from './inicio/video-seguro.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatChipsModule,
+    MatCardModule,
+    MatDialogModule,
   ],
   providers: [DatePipe, AlertifyService,],
   bootstrap: [AppComponent]
