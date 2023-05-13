@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'hijo',
   template: `
     <div class="gohanComp" style="justify-content: center; text-align: center;">
-      <!-- <p>Canjea Tu Cupon {{EntradaHijo}} <p> -->
+      <p> !!Canjea Tu Cupon y {{Entrada}} <p> 
       <button 
         type="button" 
         (click)="Alerta(true)" class="btn btn-outline-info"
@@ -14,15 +14,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./hijo.component.css']
 })
 export class HijoComponent implements OnInit {
-  @Input() EntradaHijo: string | undefined;
-  @Output() SalidaHijo = new EventEmitter<boolean>();
+  @Input() Entrada: string | undefined;
+  @Output() Salida = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit() {
   }
 
   Alerta(msg: boolean){
-    this.SalidaHijo.emit(msg)
+    this.Salida.emit(msg)
     console.log(msg);
   }
 

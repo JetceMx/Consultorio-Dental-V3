@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
       <div class="row">
         <div class="col-sm-8 offset-sm-2">
           <hijo
-            [EntradaHijo]="HerenciaPadre" 
-            (SalidaHijo)="Lista($event)">
+            [Entrada]="HerenciaPadre" 
+            (Salida)="Lista($event)">
           </hijo>
           <h3 style="justify-content: center; text-align: center;"></h3>
           <img style="justify-content: center; text-align: center;" src="{{Img}}" alt="">
@@ -24,7 +24,7 @@ import { Component } from '@angular/core';
 export class PadreComponent {
   Bandera: boolean = false;
   Img: string | undefined;
-  HerenciaPadre: string = "Soy el Cupon :D"
+  HerenciaPadre: string = "No te pierdas de las grandes ofertas especiales que tenemos para ti !!"
 
   constructor() { }
 
