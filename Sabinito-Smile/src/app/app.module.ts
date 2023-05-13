@@ -28,6 +28,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import { FiltroPipe } from './filtro.pipe';
+import { Error404Component } from './error404/error404.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { FiltroPipe } from './filtro.pipe';
     RecoComponent,
     VideoSeguroPipe,
     FiltroPipe,
+    Error404Component,
   ],
   imports: [
     BrowserModule,
