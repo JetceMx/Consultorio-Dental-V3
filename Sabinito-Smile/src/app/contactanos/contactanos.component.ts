@@ -5,14 +5,16 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './contactanos.component.html',
   styleUrls: ['./contactanos.component.css']
 })
+
 export class ContactanosComponent {
 
   title = 'Proyecto';
+  selection = '';
 
   forma!: FormGroup;
   usuario:any={
     nombre:"xxx",
-    telefono:"yyyy",
+    telefono:"000-000-0000",
     correo:"zzz@www.com"
     }
 
