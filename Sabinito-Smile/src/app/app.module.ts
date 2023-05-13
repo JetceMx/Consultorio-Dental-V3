@@ -29,8 +29,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import { FiltroPipe } from './filtro.pipe';
 import { Error404Component } from './error404/error404.component';
-import { GokuComponent } from './inicio/goku/goku.component';
-import { GohanComponent } from './inicio/gohan/gohan.component';
+import { PadreComponent } from './inicio/padre/padre.component';
+import { HijoComponent } from './inicio/hijo/hijo.component';
 
 
 @NgModule({
@@ -49,8 +49,8 @@ import { GohanComponent } from './inicio/gohan/gohan.component';
     VideoSeguroPipe,
     FiltroPipe,
     Error404Component,
-    GokuComponent, 
-    GohanComponent
+    PadreComponent, 
+    HijoComponent
   ],
   imports: [
     BrowserModule,
