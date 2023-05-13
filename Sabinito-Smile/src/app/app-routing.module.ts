@@ -7,6 +7,7 @@ import { RecomendacionesComponent } from './recomendaciones/recomendaciones.comp
 import { AgendarComponent } from './citas/agendar/agendar.component';
 import { RevisarComponent } from './citas/revisar/revisar.component';
 import { CitasComponent } from './citas/citas.component';
+import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'citas', component: CitasComponent },
   { path: 'citas/agendar', component: AgendarComponent },
   { path: 'citas/revisar', component: RevisarComponent },
+  { path: '**', component: Error404Component }
 ];
 
 @NgModule({
