@@ -9,11 +9,17 @@ export class LocalCitasService {
 
   constructor() {
     this.arrayCitas = JSON.parse(localStorage.getItem('data') || '[]');
-    
+
   }
 
   getArrayCitas() {
     return this.arrayCitas;
+  }
+
+  mostrarHorasArrayCitas(): void {
+    for (let cita of this.arrayCitas) {
+      console.log(cita.hora);
+    }
   }
 
   agregarCita(cita: citasInterface) {
